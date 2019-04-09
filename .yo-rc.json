@@ -1,0 +1,12 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.8.0",
+    "libraryName": "training-demo",
+    "libraryId": "2dc971c7-ee2c-439b-8405-6d36530c6693",
+    "environment": "spo",
+    "packageManager": "npm",
+    "isCreatingSolution": false,
+    "isDomainIsolated": true,
+    "componentType": "webpart"
+  }
+}

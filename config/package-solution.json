@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "training-demo-client-side-solution",
+    "id": "2dc971c7-ee2c-439b-8405-6d36530c6693",
+    "version": "1.0.0.5",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": true,
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Group.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Directory.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadBasic.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope":"User.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope":"User.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope":"Directory.Read.All"
+      }
+    ]
+  },
+  
+  "paths": {
+    "zippedPackage": "solution/training-demo.sppkg"
+  }
+}
