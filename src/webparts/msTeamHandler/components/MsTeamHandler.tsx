@@ -37,6 +37,7 @@ public componentDidMount ()
 {
 
  //need User.ReadBasic.All
+ //Application	User.Read.All, User.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All
 this.props.client.api("/users/").version("beta").get().then(response=>{
   console.log(response);
  response.value.map((item:any)=>{officeUsers.push({key:item.id,text:item.displayName});});
@@ -73,6 +74,7 @@ if(response['@odata.nextLink']!=null)
 //Get all groups in the tenant which is having Teams in group.
 //V1.0 - /groups?$select=id,resourceProvisioningOptions
 //this.props.client.api("/groups?$select=id,resourceProvisioningOptions").get(this.SuccessFailureCallBack);
+//Group.Read.All, Group.ReadWrite.All
   private getGroupHavingTeams():void
   {
   this.props.client.api("/groups?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')").version('beta').get().then(response=>{
@@ -108,6 +110,7 @@ private handleChange(event):void  {
   this.setState({Teamstitle: event.target.value});
 }
 //Create MS team using GraphAPI beta version
+//Group.ReadWrite.All
   private CreateTeam()
 {
   let TT= this.state.Teamstitle;
@@ -126,6 +129,7 @@ console.log(content);
 }
 
 //Add member into the Teams
+//Group.ReadWrite.All, Directory.ReadWrite.All
 private AddMember() {
   console.log("Group" + selectedGroup , "User", selectedUser);
   if(selectedGroup!=null&& selectedUser !=null)
