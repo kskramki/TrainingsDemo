@@ -3,7 +3,7 @@
   "solution": {
     "name": "training-demo-client-side-solution",
     "id": "2dc971c7-ee2c-439b-8405-6d36530c6693",
-    "version": "1.0.0.5",
+    "version": "1.0.0.6",
     "includeClientSideAssets": true,
     "isDomainIsolated": true,
     "webApiPermissionRequests": [
