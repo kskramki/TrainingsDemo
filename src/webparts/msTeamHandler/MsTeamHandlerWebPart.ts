@@ -20,6 +20,14 @@ export interface IMsTeamHandlerWebPartProps {
 export default class MsTeamHandlerWebPart extends BaseClientSideWebPart<IMsTeamHandlerWebPartProps> {
 
   public render(): void {
+    // let domElement = document.createElement("div");
+    //  this.domElement.appendChild(domElement); 
+
+    
+     this.context.statusRenderer.displayLoadingIndicator(this.domElement,"Please Wait.",900);
+     //just to check the custom loading message added settimeout
+      setTimeout(() => {
+      this.context.statusRenderer.clearLoadingIndicator(this.domElement);
     this.context.msGraphClientFactory.getClient()
     .then((grphclient: MSGraphClient): void => {
       const element: React.ReactElement<IMsTeamHandlerProps > = React.createElement(
@@ -30,6 +38,7 @@ export default class MsTeamHandlerWebPart extends BaseClientSideWebPart<IMsTeamH
         });
         ReactDom.render(element, this.domElement);
       });
+     },5000);
   }
 
   protected onDispose(): void {
