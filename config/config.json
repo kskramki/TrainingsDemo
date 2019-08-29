@@ -22,6 +22,7 @@
   "externals": {},
   "localizedResources": {
     "MsTeamsAppWebPartStrings": "lib/webparts/msTeamsApp/loc/{locale}.js",
-    "MsTeamHandlerWebPartStrings": "lib/webparts/msTeamHandler/loc/{locale}.js"
+    "MsTeamHandlerWebPartStrings": "lib/webparts/msTeamHandler/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

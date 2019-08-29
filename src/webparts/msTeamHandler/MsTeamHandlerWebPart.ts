@@ -24,7 +24,7 @@ export default class MsTeamHandlerWebPart extends BaseClientSideWebPart<IMsTeamH
     //  this.domElement.appendChild(domElement); 
 
     
-     this.context.statusRenderer.displayLoadingIndicator(this.domElement,"Please Wait.",900);
+     this.context.statusRenderer.displayLoadingIndicator(this.domElement,"Loading... Please Wait..",900);
      //just to check the custom loading message added settimeout
       setTimeout(() => {
       this.context.statusRenderer.clearLoadingIndicator(this.domElement);
@@ -33,6 +33,7 @@ export default class MsTeamHandlerWebPart extends BaseClientSideWebPart<IMsTeamH
       const element: React.ReactElement<IMsTeamHandlerProps > = React.createElement(
         MSTeamHandler,
         {
+          
           TeamTitle: this.properties.MSTeamTitle,
         client:grphclient
         });

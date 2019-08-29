@@ -38,6 +38,7 @@ public componentDidMount ()
 
  //need User.ReadBasic.All
  //Application	User.Read.All, User.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All
+ this.props.client.api("/me").version("1.0").get().then(data=>{console.log("My details"); console.log(JSON.stringify(data, null, 2));});
 this.props.client.api("/users/").version("beta").get().then(response=>{
   console.log(response);
  response.value.map((item:any)=>{officeUsers.push({key:item.id,text:item.displayName});});
