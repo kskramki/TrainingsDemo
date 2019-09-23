@@ -18,10 +18,9 @@ steps:
 - script: |
     npm install
     npm run build
-- task: Gulp@1
+- task: PublishBuildArtifacts@1
   inputs:
-    gulpFile: 'gulpfile.js'
-    targets: 'package-solution'
-    arguments: '--ship'
-    enableCodeCoverage: false
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
   displayName: 'npm install and build'
