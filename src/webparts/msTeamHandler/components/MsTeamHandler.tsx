@@ -229,7 +229,7 @@ private _onUserNameChange = (item: IDropdownOption,index:Number): void => {
          disabled={false}
       />
      
-     <button disabled={this.state.isHidden}  value="Add Member" id="btnAddMember" onClick={this.AddMember}>Add Team Member</button>
+     <button disabled={this.state.isHidden}  value="Add Member" id="btnAddMember" onClick={this.AddMember}>Add a Team Member</button>
      </div>
       
       </div>
