@@ -18,4 +18,10 @@ steps:
 - script: |
     npm install
     npm run build
+- task: Gulp@1
+  inputs:
+    gulpFile: 'gulpfile.js'
+    targets: 'package-solution'
+    arguments: '--ship'
+    enableCodeCoverage: false
   displayName: 'npm install and build'
